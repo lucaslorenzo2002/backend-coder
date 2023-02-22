@@ -297,7 +297,7 @@ IO.on('connection', socket => {
 })
 
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 const server = httpServer.listen( PORT, () => {
     logger.info(` server listening on PORT: ${PORT}`)
